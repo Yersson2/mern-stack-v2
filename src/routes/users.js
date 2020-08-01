@@ -4,9 +4,9 @@ const { getUsers, createUser, deleteUser } = require('../controllers/users.contr
 
 router.route('/')
   .get(getUsers)
-  .post(createUser)
+  .post(createUser);
 
-  router.route('/id')
-    .delete(deleteUser)
+router.route('/:id')
+  .delete(deleteUser);
 
 module.exports = router;
