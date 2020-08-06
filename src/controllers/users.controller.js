@@ -14,7 +14,7 @@ usersCtrl.createUser = async (req, res) => {
 };
 
 usersCtrl.deleteUser = async (req, res) => {
-  await User.findOneAndDelete(req.params.id)
+  await User.findByIdAndDelete(req.params.id)
   res.json({ message: "user deleted"});
 };
 
